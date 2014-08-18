@@ -17,7 +17,7 @@
         "issues": "https://github.com/craftsmancoding/modx-installer/issues",
         "forum": "http://forums.modx.com/",
         "wiki": "https://github.com/craftsmancoding/modx-installer/wiki",
-        "source": "https://github.com/craftsmancoding/modx-installer
+        "source": "https://github.com/craftsmancoding/modx-installer"
     },    
     "require": {
         "php": ">=5.3"
