@@ -28,6 +28,6 @@
         }
     },
     "extra": {
-        "class":"ModxInstaller\\Composer\\ModxInstallerPlugin"
+        "class":"ModxInstaller\\Composer\\Plugin"
     }
 }
