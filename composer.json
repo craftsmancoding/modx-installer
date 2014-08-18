@@ -1,0 +1,33 @@
+{
+    "name": "craftsmancoding/modx-installer",
+    "description": "Composer custom installer for MODX Revolution 2.x",
+    "type": "composer-plugin",
+    "keywords": ["modx","composer"],
+    "homepage": "https://github.com/craftsmancoding/modx-installer",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Everett Griffiths",
+            "email": "everett@craftsmancoding.com",
+            "homepage" : "https://github.com/craftsmancoding/modx-installer"
+        }        
+    ],
+    "support": {
+        "email": "donotreply@craftsmancoding.org",
+        "issues": "https://github.com/craftsmancoding/modx-installer/issues",
+        "forum": "http://forums.modx.com/",
+        "wiki": "https://github.com/craftsmancoding/modx-installer/wiki",
+        "source": "https://github.com/craftsmancoding/modx-installer
+    },    
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ModxInstaller\\":"src/"
+        }
+    },
+    "extra": {
+        "class":"ModxInstaller\\Composer\\ModxInstallerPlugin"
+    }
+}
