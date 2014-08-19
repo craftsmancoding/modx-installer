@@ -83,21 +83,26 @@ class Script {
         $methods = get_class_methods($event);
         error_log('Event methods: '.print_r($methods,true));
 
-        $composer = $event->getComposer();     
-        
-//        $installedPackage = $event->getOperation()->getPackage();
-//        error_log(print_r($composer,true));
-        $vars = get_object_vars($composer);
-        error_log('Composer vars: '. print_r($vars,true));
-        $methods = get_class_methods($composer);
-        error_log('Composer methods: '.print_r($methods,true));
+        $composer = $event->getComposer();
+
+         $vars = get_object_vars($composer);
+         error_log('Composer vars: '. print_r($vars,true));
+         $methods = get_class_methods($composer);
+         error_log('Composer methods: '.print_r($methods,true));
+
+        $package = $event->getComposer()->getPackage();
+
+        $vars = get_object_vars($package);
+        error_log('Package vars: '. print_r($vars,true));
+        $methods = get_class_methods($package);
+        error_log('Package methods: '.print_r($methods,true));
         
         $config = $composer->getConfig();
         
         $vars = get_object_vars($config);
         error_log('Config vars: '. print_r($vars,true));
         $methods = get_class_methods($config);
-        error_log('Congif methods: '.print_r($methods,true));
+        error_log('Config methods: '.print_r($methods,true));
 
          $src = $config->getConfigSource();
          error_log('Config contents: '.print_r($src, true));
