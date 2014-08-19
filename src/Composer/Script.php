@@ -17,8 +17,10 @@ class Script {
      public static function postUpdate(\Composer\Script\PackageEvent $event) {
         error_log(__CLASS__.'::'.__FUNCTION__.' called...');
         $composer = $event->getComposer();     
-        $installedPackage = $event->getOperation()->getPackage();
-        error_log(print_r($installedPackage,true));
+        
+//        $installedPackage = $event->getOperation()->getPackage();
+        error_log(print_r($composer,true));
+        error_log(print_r($composer->getPackageBasePath(), true));
      }
      
      public static function preUninstall(\Composer\Script\PackageEvent $event) {
