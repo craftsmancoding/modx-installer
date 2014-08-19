@@ -19,8 +19,13 @@ class Script {
         $composer = $event->getComposer();     
         
 //        $installedPackage = $event->getOperation()->getPackage();
-        error_log(print_r($composer,true));
-        error_log(print_r($composer->getPackageBasePath(), true));
+//        error_log(print_r($composer,true));
+        $vars = get_object_vars($composer);
+        error_log(print_r($vars,true));
+        $methods = get_class_methods($composer);
+        error_log(print_r($methods,true));
+        
+//        error_log(print_r($composer->getPackageBasePath(), true));
      }
      
      public static function preUninstall(\Composer\Script\PackageEvent $event) {
