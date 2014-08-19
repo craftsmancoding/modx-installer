@@ -43,7 +43,7 @@ class Installer extends LibraryInstaller
         error_log(__FUNCTION__);
         return 'modx-package' === $packageType;
     }
-asdf
+
     /**
      * {@inheritDoc}
      */
