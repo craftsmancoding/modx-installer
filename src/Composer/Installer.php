@@ -12,6 +12,7 @@ namespace ModxInstaller\Composer;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
+use Composer\Repository\InstalledRepositoryInterface;
 
 class Installer extends LibraryInstaller
 {
@@ -47,7 +48,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function install(\Composer\Repository\InstalledRepositoryInterface $repo, \Composer\Package\PackageInterface$package)
+    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         error_log(__CLASS__.'::'.__FUNCTION__);
         error_log('Repo: '.print_r($repo,true));
@@ -88,7 +89,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function uninstall($repo, $package)
+    public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         return parent::uninstall($repo, $package);
 /*
