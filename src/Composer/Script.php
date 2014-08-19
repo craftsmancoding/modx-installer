@@ -16,14 +16,20 @@ class Script {
      
      public static function postUpdate(\Composer\Script\PackageEvent $event) {
         error_log(__CLASS__.'::'.__FUNCTION__.' called...');
+
+        $vars = get_object_vars($event);
+        error_log('Event vars: '. print_r($vars,true));
+        $methods = get_class_methods($event);
+        error_log('Event methods: '.print_r($methods,true));
+
         $composer = $event->getComposer();     
         
 //        $installedPackage = $event->getOperation()->getPackage();
 //        error_log(print_r($composer,true));
         $vars = get_object_vars($composer);
-        error_log(print_r($vars,true));
+        error_log('Composer vars: '. print_r($vars,true));
         $methods = get_class_methods($composer);
-        error_log(print_r($methods,true));
+        error_log('Composer methods: '.print_r($methods,true));
         
 //        error_log(print_r($composer->getPackageBasePath(), true));
      }
