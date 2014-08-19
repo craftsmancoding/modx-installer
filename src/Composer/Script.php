@@ -96,7 +96,8 @@ class Script {
         error_log('Package vars: '. print_r($vars,true));
         $methods = get_class_methods($package);
         error_log('Package methods: '.print_r($methods,true));
-        
+        error_log('Package type: '. $package->getType());
+         
         $config = $composer->getConfig();
         
         $vars = get_object_vars($config);
