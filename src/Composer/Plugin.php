@@ -1,5 +1,7 @@
 <?php
-
+/**
+ *  Register the MODX Composer Plugin
+ */
 namespace ModxInstaller\Composer;
 
 use Composer\Composer;
