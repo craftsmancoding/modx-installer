@@ -38,6 +38,7 @@ class Script {
         $methods = get_class_methods($config);
         error_log('Congif methods: '.print_r($methods,true));
 
+        error_log('Congig get: '.$config->get('type'));
 //        error_log('Composer config '.print_r($config,true));        
 //        error_log(print_r($composer->getPackageBasePath(), true));
      }
