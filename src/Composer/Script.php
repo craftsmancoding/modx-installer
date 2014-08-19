@@ -10,18 +10,18 @@
 namespace ModxInstaller\Composer;
 
 class Script {
-     public static function postInstall(Composer\Script\PackageEvent $event) {
+     public static function postInstall(\Composer\Script\PackageEvent $event) {
         error_log(__CLASS__.'::'.__FUNCTION__.' called...');
      }
      
-     public static function postUpdate(Composer\Script\PackageEvent $event) {
+     public static function postUpdate(\Composer\Script\PackageEvent $event) {
         error_log(__CLASS__.'::'.__FUNCTION__.' called...');
         $composer = $event->getComposer();     
         $installedPackage = $event->getOperation()->getPackage();
         error_log(print_r($installedPackage,true));
      }
      
-     public static function preUninstall(Composer\Script\PackageEvent $event) {
+     public static function preUninstall(\Composer\Script\PackageEvent $event) {
         error_log(__CLASS__.'::'.__FUNCTION__.' called...');     
      }
 }
