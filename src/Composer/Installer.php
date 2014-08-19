@@ -56,7 +56,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
+    public function install(\Composer\Repository\InstalledRepositoryInterface $repo, \Composer\Package\PackageInterface $package)
     {
         $vars = get_object_vars($repo);
         error_log('Repo vars: '. print_r($vars,true));
@@ -86,7 +86,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
+    public function update(\Composer\Repository\InstalledRepositoryInterface $repo, \Composer\Package\PackageInterface $initial, \Composer\Package\PackageInterface $target)
     {
         $vars = get_object_vars($repo);
         error_log('Repo vars: '. print_r($vars,true));
@@ -123,7 +123,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
+    public function uninstall(\Composer\Repository\InstalledRepositoryInterface $repo, \Composer\Package\PackageInterface $package)
     {
         return parent::uninstall($repo, $package);
         /*
