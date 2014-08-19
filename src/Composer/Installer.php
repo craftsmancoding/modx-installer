@@ -72,9 +72,10 @@ class Installer extends LibraryInstaller
      */
     public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
-        error_log(print_r($repo,true));
-        error_log(print_r($initial,true));
-        error_log(print_r($target,true));
+        error_log(__CLASS__.'::'.__FUNCTION__.' called.');
+        error_log('Repo:'. print_r($repo,true));
+        error_log('Initial:'. print_r($initial,true));
+        error_log('Target: '.print_r($target,true));
         return parent::update($repo,$initial,$target);    
 /*
         $extra = $target->getExtra();
