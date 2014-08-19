@@ -42,8 +42,13 @@ class Installer extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        error_log(__CLASS__.'::'.__FUNCTION__.' called.');
-        return 'modx-package' === $packageType;
+        error_log(__CLASS__.'::'.__FUNCTION__.' called... packageType:'.$packageType);
+        if ('modx-package' === $packageType) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
