@@ -19,10 +19,11 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
+/*
     public function getPackageBasePath(PackageInterface $package)
     {
-        error_log(__FUNCTION__);
-/*
+        error_log(__CLASS__.'::'.__FUNCTION__.' called.');
+        
         $prefix = substr($package->getPrettyName(), 0, 23);
         if ('phpdocumentor/template-' !== $prefix) {
             throw new \InvalidArgumentException(
@@ -33,15 +34,15 @@ class Installer extends LibraryInstaller
         }
 
         return 'data/templates/'.substr($package->getPrettyName(), 23);
-*/
     }
+*/
 
     /**
      * {@inheritDoc}
      */
     public function supports($packageType)
     {
-        error_log(__FUNCTION__);
+        error_log(__CLASS__.'::'.__FUNCTION__.' called.');
         return 'modx-package' === $packageType;
     }
 
