@@ -32,7 +32,13 @@ class Script {
         error_log('Composer methods: '.print_r($methods,true));
         
         $config = $composer->getConfig();
-        error_log('Composer config '.print_r($config,true));        
+        
+        $vars = get_object_vars($config);
+        error_log('Config vars: '. print_r($vars,true));
+        $methods = get_class_methods($config);
+        error_log('Congif methods: '.print_r($methods,true));
+
+//        error_log('Composer config '.print_r($config,true));        
 //        error_log(print_r($composer->getPackageBasePath(), true));
      }
      
