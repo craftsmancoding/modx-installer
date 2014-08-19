@@ -31,6 +31,8 @@ class Script {
         $methods = get_class_methods($composer);
         error_log('Composer methods: '.print_r($methods,true));
         
+        $config = $composer->getConfig();
+        error_log('Composer config '.print_r($config,true));        
 //        error_log(print_r($composer->getPackageBasePath(), true));
      }
      
