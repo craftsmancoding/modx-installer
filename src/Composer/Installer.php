@@ -68,7 +68,7 @@ class Installer extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function update($repo, $initial, $target)
+    public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
         error_log(print_r($repo,true));
         error_log(print_r($initial,true));
