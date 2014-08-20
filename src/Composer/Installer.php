@@ -72,7 +72,7 @@ class Installer extends LibraryInstaller
 //        error_log('Package methods: '.print_r($methods,true));
         foreach ($methods as $m) {
 
-            error_log($m.': '.print_r($package->$m, true));
+            error_log($m.': '.print_r($package->$m(), true));
         }
 
         return parent::install($repo, $package);
