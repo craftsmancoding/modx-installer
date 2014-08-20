@@ -68,12 +68,18 @@ class Installer extends LibraryInstaller
 
 //        $vars = get_object_vars($package);
 //        error_log('Package vars: '. print_r($vars,true));
-        $methods = get_class_methods($package);
+//        $methods = get_class_methods($package);
 //        error_log('Package methods: '.print_r($methods,true));
-        foreach ($methods as $m) {
-
-            error_log($m.': '.print_r($package->$m(), true));
-        }
+//        foreach ($methods as $m) {
+//            error_log($m.': '.print_r($package->$m(), true));
+//        }
+        error_log('getRepositories: '. print_r($package->getRepositories(),true));
+        error_log('getTargetDir: '. print_r($package->getTargetDir(),true));
+        error_log('getInstallationSource: '. print_r($package->getInstallationSource(),true));
+        error_log('getSourceType: '. print_r($package->getSourceType(),true));
+        error_log('getName: '. print_r($package->getName(),true));
+        error_log('getPrettyName: '. print_r($package->getPrettyName(),true));
+        error_log('getNames: '. print_r($package->getNames(),true));
 
         return parent::install($repo, $package);
         /*
