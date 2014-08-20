@@ -88,7 +88,7 @@
 [27] => setInstallationSource
 [28] => getInstallationSource
 [29] => setSourceType
-[30] => getSourceType
+[30] => getSourceType       git
 [31] => setSourceUrl
 [32] => getSourceUrl
 [33] => setSourceReference
@@ -134,9 +134,9 @@
 [73] => setArchiveExcludes
 [74] => getArchiveExcludes
 [75] => replaceVersion
-[76] => getName
-[77] => getPrettyName
-[78] => getNames
+[76] => getName             craftsmancoding/repoman
+[77] => getPrettyName       craftsmancoding/repoman
+[78] => getNames            Array([0] => craftsmancoding/repoman)
 [79] => setId
 [80] => getId
 [81] => setRepository
@@ -197,7 +197,7 @@ class Script
     {
         $package = $event->getComposer()->getPackage();
         if ($package->getType() !== 'modx-package') {
-            return;
+            return false;
         }
     }
 
@@ -205,7 +205,7 @@ class Script
     {
         $package = $event->getComposer()->getPackage();
         if ($package->getType() !== 'modx-package') {
-            return;
+            return false;
         }
     }
 
@@ -213,7 +213,7 @@ class Script
     {
         $package = $event->getComposer()->getPackage();
         if ($package->getType() !== 'modx-package') {
-            return;
+            return false;
         }
     }
 }

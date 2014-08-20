@@ -83,6 +83,8 @@ class Installer extends LibraryInstaller
         $downloadPath = $this->getInstallPath($package); // eg. /path/to/vendor/xyz/abc
         error_log('installPath: '. print_r($downloadPath,true));
         $basePath = $this->getPackageBasePath($package);
+        error_log('vendorDir: '. $this->vendorDir);
+        error_log('binDir:' . $this->binDir);
         
         return parent::install($repo, $package);
         /*
