@@ -60,17 +60,20 @@ class Installer extends LibraryInstaller
     {
         error_log(__CLASS__.'::'.__FUNCTION__);
 
-        $vars = get_object_vars($repo);
-        error_log('Repo vars: '. print_r($vars,true));
-        $methods = get_class_methods($repo);
-        error_log('Repo methods: '.print_r($methods,true));
+//        $vars = get_object_vars($repo);
+//        error_log('Repo vars: '. print_r($vars,true));
+//        $methods = get_class_methods($repo);
+//        error_log('Repo methods: '.print_r($methods,true));
 
 
-        $vars = get_object_vars($package);
-        error_log('Package vars: '. print_r($vars,true));
+//        $vars = get_object_vars($package);
+//        error_log('Package vars: '. print_r($vars,true));
         $methods = get_class_methods($package);
-        error_log('Package methods: '.print_r($methods,true));
+//        error_log('Package methods: '.print_r($methods,true));
+        foreach ($methods as $m) {
 
+            error_log($m.': '.print_r($package->$m, true));
+        }
 
         return parent::install($repo, $package);
         /*
