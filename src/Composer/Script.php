@@ -150,6 +150,23 @@
 [89] => getPrettyString
 [90] => __clone
 )
+ *
+ *
+ * Repo methods: Array
+(
+[0] => __construct
+[1] => reload
+[2] => write
+[3] => getCanonicalPackages
+[4] => findPackage
+[5] => findPackages
+[6] => search
+[7] => hasPackage
+[8] => addPackage
+[9] => removePackage
+[10] => getPackages
+[11] => count
+)
  * See https://getcomposer.org/doc/articles/scripts.md
  */
 namespace ModxInstaller\Composer;
